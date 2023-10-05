@@ -31,5 +31,4 @@ while (cadenaQ.Count > 0)
 
 }
 Console.WriteLine("El programa ha llegado a su fin.");
-
 #endregion
