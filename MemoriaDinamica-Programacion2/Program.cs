@@ -84,59 +84,59 @@
 
 #region ArrayList #075
 
-// Creamos un ArrayList para almacenar las cadenas de texto.
-ArrayList listArray = new ArrayList();
+//// Creamos un ArrayList para almacenar las cadenas de texto.
+//ArrayList listArray = new ArrayList();
 
 
-while (true)
-{
-    Console.WriteLine("Introduzca una cadena de texto para guardar en la lista Array");
-    Console.WriteLine("o introduzca un texto vacio para ver lo que ha sido guardado.");
-    Console.WriteLine("");
+//while (true)
+//{
+//    Console.WriteLine("Introduzca una cadena de texto para guardar en la lista Array");
+//    Console.WriteLine("o introduzca un texto vacio para ver lo que ha sido guardado.");
+//    Console.WriteLine("");
 
-    string DatoArray = Console.ReadLine(); // Lee la entrada del usuario.
-    Console.WriteLine("");
-
-
-
-    if (string.IsNullOrEmpty(DatoArray))  // Verificar si la entrada del usuario (datoArray) está vacía o nula.
-    {
-        ConsultaArray(listArray); // Entra en el modo de consulta si el usuario ingresó una cadena vacía.
-    }
-    else
-    {
-        listArray.Add(DatoArray); // Agrega la cadena ingresada a la lista.
-    }
-}
+//    string DatoArray = Console.ReadLine(); // Lee la entrada del usuario.
+//    Console.WriteLine("");
 
 
-static void ConsultaArray(ArrayList listArray)
-{
-    while (true)
-    {
-        Console.WriteLine("¿Qué posición de la lista Array desea consultar? / Para salir del programa ingrese el número 0 : ");
-        Console.WriteLine("");
 
-        if (int.TryParse(Console.ReadLine(), out int pos))
-        {
-            if (pos == 0)
-            {
-                Environment.Exit(0);  // Al ingresar 0 se sale del programa en ejecución.
-            }
-            else if (pos >= 1 && pos <= listArray.Count) // Verifica si la posición ingresada por el usuario  está dentro del rango válido.
-            {
-                Console.WriteLine($"En posición {pos} se encuentra: {listArray[pos - 1]}");  // Muestra la cadena en la posición especifica.
+//    if (string.IsNullOrEmpty(DatoArray))  // Verificar si la entrada del usuario (datoArray) está vacía o nula.
+//    {
+//        ConsultaArray(listArray); // Entra en el modo de consulta si el usuario ingresó una cadena vacía.
+//    }
+//    else
+//    {
+//        listArray.Add(DatoArray); // Agrega la cadena ingresada a la lista.
+//    }
+//}
 
-            }
-            else
-            {
-                Console.WriteLine("La posición se encuentra fuera de rango. A continuación, intente nuevamente: ");
-            }
-        }
-        else
-        {
-            Console.WriteLine("La entrada no es válida. A continuación, ingrese un número válido o ingrese 0 para salir.");
-        }
-    }
-}
+
+//static void ConsultaArray(ArrayList listArray)
+//{
+//    while (true)
+//    {
+//        Console.WriteLine("¿Qué posición de la lista Array desea consultar? / Para salir del programa ingrese el número 0 : ");
+//        Console.WriteLine("");
+
+//        if (int.TryParse(Console.ReadLine(), out int pos))
+//        {
+//            if (pos == 0)
+//            {
+//                Environment.Exit(0);  // Al ingresar 0 se sale del programa en ejecución.
+//            }
+//            else if (pos >= 1 && pos <= listArray.Count) // Verifica si la posición ingresada por el usuario  está dentro del rango válido.
+//            {
+//                Console.WriteLine($"En posición {pos} se encuentra: {listArray[pos - 1]}");  // Muestra la cadena en la posición especifica.
+
+//            }
+//            else
+//            {
+//                Console.WriteLine("La posición se encuentra fuera de rango. A continuación, intente nuevamente: ");
+//            }
+//        }
+//        else
+//        {
+//            Console.WriteLine("La entrada no es válida. A continuación, ingrese un número válido o ingrese 0 para salir.");
+//        }
+//    }
+//}
 #endregion
