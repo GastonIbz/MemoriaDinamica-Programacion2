@@ -143,43 +143,115 @@
 
 #region #077 SortedList
 
-// Crear una SortedList para el diccionario inglés-español.
-SortedList<string, string> diccionario = new SortedList<string, string>();
+//// Crear una SortedList para el diccionario inglés-español.
+//SortedList<string, string> diccionario = new SortedList<string, string>();
 
 
-// Agregar palabras al diccionario, las que sean necesarias.
-diccionario.Add("hello", "hola");
-diccionario.Add("apple", "manzana");
-diccionario.Add("car", "coche");
-diccionario.Add("house", "casa");
-diccionario.Add("computer", "computadora");
-diccionario.Add("Programming", "Programación");
-diccionario.Add("Hello", "Hola");
-diccionario.Add("Game", "Juego");
-diccionario.Add("Table", "Mesa");
-diccionario.Add("Sneakers", "Zapatillas");
-diccionario.Add("Glossary", "Glosario");
-diccionario.Add("Soccer","Fútbol");
-diccionario.Add("Backpack", "Mochila");
-diccionario.Add("Plane", "Avion");
-diccionario.Add("Lanyards", "Cordones");
-diccionario.Add("Ship", "Barco");
-diccionario.Add("Button", "Boton");
-diccionario.Add("Cheese", "Queso");
-diccionario.Add("Chair", "Silla");
-diccionario.Add("Kitchen", "Cocina");
-diccionario.Add("Shower", "Ducha");
-diccionario.Add("Bed", "Cama");
-diccionario.Add("Bear", "Oso");
-diccionario.Add("Bee", "Abeja");
-diccionario.Add("Honey", "Miel");
-diccionario.Add("Beer", "Cerveza");
-diccionario.Add("Beard", "Barba");
-diccionario.Add("Face", "Cara");
-diccionario.Add("Food", "Comida");
-diccionario.Add("Park", "Parque");
-diccionario.Add("Market", "Mercado");
-diccionario.Add("Diccionary", "Diccionario");
+//// Agregar palabras al diccionario, las que sean necesarias.
+//diccionario.Add("hello", "hola");
+//diccionario.Add("apple", "manzana");
+//diccionario.Add("car", "coche");
+//diccionario.Add("house", "casa");
+//diccionario.Add("computer", "computadora");
+//diccionario.Add("Programming", "Programación");
+//diccionario.Add("Hello", "Hola");
+//diccionario.Add("Game", "Juego");
+//diccionario.Add("Table", "Mesa");
+//diccionario.Add("Sneakers", "Zapatillas");
+//diccionario.Add("Glossary", "Glosario");
+//diccionario.Add("Soccer", "Fútbol");
+//diccionario.Add("Backpack", "Mochila");
+//diccionario.Add("Plane", "Avion");
+//diccionario.Add("Lanyards", "Cordones");
+//diccionario.Add("Ship", "Barco");
+//diccionario.Add("Button", "Boton");
+//diccionario.Add("Cheese", "Queso");
+//diccionario.Add("Chair", "Silla");
+//diccionario.Add("Kitchen", "Cocina");
+//diccionario.Add("Shower", "Ducha");
+//diccionario.Add("Bed", "Cama");
+//diccionario.Add("Bear", "Oso");
+//diccionario.Add("Bee", "Abeja");
+//diccionario.Add("Honey", "Miel");
+//diccionario.Add("Beer", "Cerveza");
+//diccionario.Add("Beard", "Barba");
+//diccionario.Add("Face", "Cara");
+//diccionario.Add("Food", "Comida");
+//diccionario.Add("Park", "Parque");
+//diccionario.Add("Market", "Mercado");
+//diccionario.Add("Diccionary", "Diccionario");
+
+//// Variable para controlar si el programa debe continuar ejecutándose.
+//bool continuar = true;
+
+//while (continuar)
+//{
+//    // Solicitar al usuario que ingrese una palabra en inglés.
+//    Console.Write("Ingrese una palabra en inglés para obtener su traducción al español (o escriba 'salir' para finalizar): ");
+//    // To Lower es para que el diccionario sea insensible a mayúsculas o minúsculas, es decir que la aplicación reconocerá palabras escritas en diferentes formas de capitalización (por ejemplo, "hola", "Hola" y "HOLA" se considerarán iguales).
+//    string Traduciringles = Console.ReadLine().ToLower();
+
+//    if (Traduciringles == "salir")
+//    {
+//        continuar = false; // Establece continuar en falso para salir del bucle.
+//    }
+//    else
+//    {
+//        // Buscar la traducción en el diccionario (insensible a mayúsculas y minúsculas).
+//        if (diccionario.TryGetValue(Traduciringles, out string traduccion))
+//        {
+//            Console.WriteLine($"La traducción al español de '{Traduciringles}' es '{traduccion}'.");
+//        }
+//        else
+//        {
+//            Console.WriteLine($"La palabra '{Traduciringles}' no se encuentra en el diccionario.");
+//        }
+//    }
+//}
+
+
+
+#endregion
+
+#region #078 Tabla Hash 
+
+// Crear una tabla hash para el diccionario
+Dictionary<string, string> diccionario = new Dictionary<string, string>();
+
+// Agregar palabras al diccionario.
+diccionario["hello"] = "hola";
+diccionario["apple"] = "manzana";
+diccionario["car"] = "coche";
+diccionario["house"] = "casa";
+diccionario["computer"] = "computadora";
+diccionario["programming"] = "programación";
+diccionario["hello"] = "hola";
+diccionario["game"] = "juego";
+diccionario["table"] = "mesa";
+diccionario["sneakers"] = "zapatillas";
+diccionario["glossary"] = "glosario";
+diccionario["soccer"] = "fútbol";
+diccionario["backpack"] = "mochila";
+diccionario["plane"] = "avion";
+diccionario["lanyards"] = "cordones";
+diccionario["ship"] = "barco";
+diccionario["button"] = "boton";
+diccionario["cheese"] = "queso";
+diccionario["chair"] = "silla";
+diccionario["kitchen"] = "cocina";
+diccionario["shower"] = "ducha";
+diccionario["bed"] = "cama";
+diccionario["bear"] = "oso";
+diccionario["bee"] = "abeja";
+diccionario["honey"] = "miel";
+diccionario["beer"] = "cerveza";
+diccionario["beard"] = "barba";
+diccionario["face"] = "cara";
+diccionario["food"] = "comida";
+diccionario["park"] = "parque";
+diccionario["market"] = "mercado";
+diccionario["diccionary"] = "diccionario";
+
 
 // Variable para controlar si el programa debe continuar ejecutándose.
 bool continuar = true;
@@ -188,26 +260,26 @@ while (continuar)
 {
     // Solicitar al usuario que ingrese una palabra en inglés.
     Console.Write("Ingrese una palabra en inglés para obtener su traducción al español (o escriba 'salir' para finalizar): ");
-    string Traduciringles = Console.ReadLine().ToLower();
-
-    if (Traduciringles == "salir")
+    // To Lower es para que el diccionario sea insensible a mayúsculas o minúsculas, es decir que la aplicación reconocerá palabras escritas en diferentes formas de capitalización (por ejemplo, "hola", "Hola" y "HOLA" se considerarán iguales).
+    string Traductoringles = Console.ReadLine().ToLower();
+    if (Traductoringles == "salir")
     {
         continuar = false; // Establece continuar en falso para salir del bucle.
     }
     else
     {
-        // Buscar la traducción en el diccionario (insensible a mayúsculas y minúsculas).
-        if (diccionario.TryGetValue(Traduciringles, out string traduccion))
+        // Buscar la traducción en el diccionario.
+        if (diccionario.TryGetValue(Traductoringles, out string traduccion))
         {
-            Console.WriteLine($"La traducción al español de '{Traduciringles}' es '{traduccion}'.");
+            Console.WriteLine($"La traducción al español de '{Traductoringles}' es '{traduccion}'.");
         }
         else
         {
-            Console.WriteLine($"La palabra '{Traduciringles}' no se encuentra en el diccionario.");
+            Console.WriteLine($"La palabra '{Traductoringles}' no se encuentra en el diccionario.");
         }
     }
 }
 
-  
 
 #endregion
+
