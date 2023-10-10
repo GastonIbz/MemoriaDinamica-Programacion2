@@ -285,46 +285,46 @@
 
 #region  SortedSet y HashSet #079 
 
-// Crea un conjunto (SortedSet) para almacenar frases únicas
-SortedSet<string> frasesUnicas = new SortedSet<string>();
-// Crea un conjunto (HashSet) para almacenar frases duplicadas
-HashSet<string> frasesDuplicadas = new HashSet<string>();
+//// Crea un conjunto (SortedSet) para almacenar frases únicas
+//SortedSet<string> frasesUnicas = new SortedSet<string>();
+//// Crea un conjunto (HashSet) para almacenar frases duplicadas
+//HashSet<string> frasesDuplicadas = new HashSet<string>();
 
-Console.WriteLine("Ingrese frases, si desea finalizar no escriba nada (deje vacío):");
+//Console.WriteLine("Ingrese frases, si desea finalizar no escriba nada (deje vacío):");
 
-while (true)
-{
-    // Espera que el usuario ingrese una frase.
-    Console.Write(" ");
-    string frase = Console.ReadLine();
+//while (true)
+//{
+//    // Espera que el usuario ingrese una frase.
+//    Console.Write(" ");
+//    string frase = Console.ReadLine();
 
-    if (string.IsNullOrWhiteSpace(frase))   // Verifica si la frase ingresada es nula o vacía para finalizar el programa
+//    if (string.IsNullOrWhiteSpace(frase))   // Verifica si la frase ingresada es nula o vacía para finalizar el programa
 
-        break;
+//        break;
 
-    if (frasesUnicas.Contains(frase))    // Verifica si la frase ya existe en el conjunto de frases únicas
-    {
-        Console.WriteLine("La frase ya fue ingresada anteriormente.");
-        frasesDuplicadas.Add(frase);  // Agrega la frase duplicada al conjunto de frases duplicadas
-    }
-    else
-    {
-        frasesUnicas.Add(frase); // Agrega la frase al conjunto de frases únicas
-    }
-}
+//    if (frasesUnicas.Contains(frase))    // Verifica si la frase ya existe en el conjunto de frases únicas
+//    {
+//        Console.WriteLine("La frase ya fue ingresada anteriormente.");
+//        frasesDuplicadas.Add(frase);  // Agrega la frase duplicada al conjunto de frases duplicadas
+//    }
+//    else
+//    {
+//        frasesUnicas.Add(frase); // Agrega la frase al conjunto de frases únicas
+//    }
+//}
 
-// muestra las frase únicas que se ingresaron
-Console.WriteLine("Frases únicas ingresadas:");
-foreach (var fraseUnica in frasesUnicas)
-{
-    Console.WriteLine(fraseUnica);
-}
-// muestra las frase duplicadas que se ingresaron
-Console.WriteLine("Frases duplicadas ingresadas:");
-foreach (var fraseDuplicada in frasesDuplicadas)
-{
-    Console.WriteLine(fraseDuplicada);
-}
+//// muestra las frase únicas que se ingresaron
+//Console.WriteLine("Frases únicas ingresadas:");
+//foreach (var fraseUnica in frasesUnicas)
+//{
+//    Console.WriteLine(fraseUnica);
+//}
+//// muestra las frase duplicadas que se ingresaron
+//Console.WriteLine("Frases duplicadas ingresadas:");
+//foreach (var fraseDuplicada in frasesDuplicadas)
+//{
+//    Console.WriteLine(fraseDuplicada);
+//}
     
 
 #endregion
