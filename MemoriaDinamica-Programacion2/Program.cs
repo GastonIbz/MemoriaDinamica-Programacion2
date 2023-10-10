@@ -140,3 +140,74 @@
 //    }
 //}
 #endregion
+
+#region #077 SortedList
+
+// Crear una SortedList para el diccionario inglés-español.
+SortedList<string, string> diccionario = new SortedList<string, string>();
+
+
+// Agregar palabras al diccionario, las que sean necesarias.
+diccionario.Add("hello", "hola");
+diccionario.Add("apple", "manzana");
+diccionario.Add("car", "coche");
+diccionario.Add("house", "casa");
+diccionario.Add("computer", "computadora");
+diccionario.Add("Programming", "Programación");
+diccionario.Add("Hello", "Hola");
+diccionario.Add("Game", "Juego");
+diccionario.Add("Table", "Mesa");
+diccionario.Add("Sneakers", "Zapatillas");
+diccionario.Add("Glossary", "Glosario");
+diccionario.Add("Soccer","Fútbol");
+diccionario.Add("Backpack", "Mochila");
+diccionario.Add("Plane", "Avion");
+diccionario.Add("Lanyards", "Cordones");
+diccionario.Add("Ship", "Barco");
+diccionario.Add("Button", "Boton");
+diccionario.Add("Cheese", "Queso");
+diccionario.Add("Chair", "Silla");
+diccionario.Add("Kitchen", "Cocina");
+diccionario.Add("Shower", "Ducha");
+diccionario.Add("Bed", "Cama");
+diccionario.Add("Bear", "Oso");
+diccionario.Add("Bee", "Abeja");
+diccionario.Add("Honey", "Miel");
+diccionario.Add("Beer", "Cerveza");
+diccionario.Add("Beard", "Barba");
+diccionario.Add("Face", "Cara");
+diccionario.Add("Food", "Comida");
+diccionario.Add("Park", "Parque");
+diccionario.Add("Market", "Mercado");
+diccionario.Add("Diccionary", "Diccionario");
+
+// Variable para controlar si el programa debe continuar ejecutándose.
+bool continuar = true;
+
+while (continuar)
+{
+    // Solicitar al usuario que ingrese una palabra en inglés.
+    Console.Write("Ingrese una palabra en inglés para obtener su traducción al español (o escriba 'salir' para finalizar): ");
+    string Traduciringles = Console.ReadLine().ToLower();
+
+    if (Traduciringles == "salir")
+    {
+        continuar = false; // Establece continuar en falso para salir del bucle.
+    }
+    else
+    {
+        // Buscar la traducción en el diccionario (insensible a mayúsculas y minúsculas).
+        if (diccionario.TryGetValue(Traduciringles, out string traduccion))
+        {
+            Console.WriteLine($"La traducción al español de '{Traduciringles}' es '{traduccion}'.");
+        }
+        else
+        {
+            Console.WriteLine($"La palabra '{Traduciringles}' no se encuentra en el diccionario.");
+        }
+    }
+}
+
+  
+
+#endregion
